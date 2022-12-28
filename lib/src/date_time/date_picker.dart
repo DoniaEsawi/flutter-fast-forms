@@ -169,7 +169,7 @@ Container cupertinoDatePickerModalPopupBuilder(
   DateTime? modalValue = field.value;
 
   return Container(
-    color: CupertinoColors.systemBackground,
+    color: Colors.red,
     height: widget.height + 90.0,
     child: Column(
       children: [
