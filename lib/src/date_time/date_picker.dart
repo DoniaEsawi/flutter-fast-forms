@@ -227,7 +227,17 @@ Widget materialDatePickerBuilder(FormFieldState<DateTime> field) {
   Future<DateTime?> show(DatePickerEntryMode entryMode) {
     return showDatePicker(
       anchorPoint: widget.anchorPoint,
-      builder: widget.dialogBuilder,
+      builder: (context, child) {
+        return Theme(
+          data: ThemeData.light().copyWith(
+            primaryColor: const Color(0xFF8CE7F1),
+            accentColor: const Color(0xFF8CE7F1),
+            colorScheme: ColorScheme.light(primary: const Color(0xFF8CE7F1)),
+            buttonTheme: ButtonThemeData(textTheme: ButtonTextTheme.primary),
+          ),
+          child: child,
+        );
+      },
       cancelText: widget.cancelText,
       confirmText: widget.confirmText,
       context: field.context,
