@@ -158,7 +158,7 @@ IconButton datePickerIconButtonBuilder(
 
   return IconButton(
     alignment: Alignment.center,
-    icon: widget.icon ?? const Icon(Icons.today),
+    icon: widget.icon ?? const Icon(Icons.add),
     onPressed: widget.enabled ? () => show(widget.initialEntryMode) : null,
   );
 }
